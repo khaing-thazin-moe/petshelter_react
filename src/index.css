@@ -1,0 +1,221 @@
+
+:root {
+  --global-white-color : #ffffff;
+  --global-yellow-color : #fab700;
+  --global-background-gray-color : #f9f9ff;
+  --global-black-color : #222222 ;
+  --global-footer-color : #1e1c27;
+  --global-text-gray-color : #777777;
+  --global-transaction : all 0.3s linear 0s;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar-toggler div {
+  width: 30px;
+  height: 4px;
+  margin: 5px 0px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+header {
+  width: 100%;
+  padding: 15px 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: var(--global-transaction);
+}
+
+header.active {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.navbar-nav li .nav-link {
+  color: var(--global-background-gray-color);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.navbar-nav li .nav-link.active {
+  color: var(--global-yellow-color);
+}
+.banner_main_container {
+  padding: 350px 0px;
+  background: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.6)), url("./assets/imgs/backgrounds/banner-bg.jpg.webp") ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.banner_container h1 {
+  font-size: 60px;
+}
+
+/* Start Global Banner Btn */
+.global_banner_btn,.global_secondary_btn {
+  color: var(--global-black-color);
+  background-color: var(--global-background-gray-color);
+  border: 1px solid var(--global-background-gray-color);
+
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--global-transaction);
+}
+
+.global_banner_btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--global-background-gray-color);
+  
+  color: var(--global-background-gray-color);
+}
+
+.global_secondary_btn {
+  color: var(--global-white-color);
+  background-color: var(--global-yellow-color);
+  border: 1px solid var(--global-yellow-color);
+}
+
+.global_secondary_btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--global-yellow-color);
+  
+  color: var(--global-yellow-color);
+}
+
+.slider_img {
+  height: 320px;
+  /* background-image: url("./components/assets/imgs/gallery/c1.jpg.webp"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner_slider {
+  transform: translateY(-50%);
+}
+
+/* End Global Banner Btn */
+
+/* Select Pet section */
+.select_pet_container {
+  background-color: var(--global-background-gray-color);
+}
+/* end select pet section */
+
+.video_container {
+  width: 100%;
+  height: 350px;
+}
+
+.process_icons {
+  background-image: url('./assets/imgs/icons/id-card.png');
+}
+
+.content_main_container h4{
+  transition: var(--global-transaction);
+}
+.content_main_container:hover h4 {
+  color: var(--global-yellow-color);
+}
+
+.process_section {
+  background-color: var(--global-background-gray-color);
+}
+
+.testmonial_items_container {
+  background-color: var(--global-background-gray-color);
+  transition: var(--global-transaction);
+}
+
+.testmonial_items_container:hover {
+  background-color: var(--global-white-color);
+}
+
+
+
+/* start invitation section */
+.invitation_section {
+  padding: 100px 0px;
+  background-image: linear-gradient(rgba(250, 183, 0, 0.75),rgba(250, 183, 0, 0.75)), url('./assets/imgs/backgrounds/call-bg.jpg.webp');
+}
+/* end invitation section */
+
+.footer_section {
+  background-color: var(--global-footer-color);
+  color: var(--global-text-gray-color);
+}
+
+.footer_section h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Gallery */
+
+.gallery_content {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #777777;
+}
+
+.gallery_caption {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+
+
+}
+.gallery_content::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.3);
+  transition: var(--global-transaction);
+}
+
+.gallery_caption span {
+  font-size: 20px;
+  color: var(--global-background-gray-color);
+  z-index: 2;
+  opacity: 0;
+  transition: var(--global-transaction);
+}
+
+.gallery_content:hover .gallery_caption span {
+  opacity: 1;
+}
+.gallery_content:hover::before{
+  background-color: transparent;
+}
+
+/* Volunteer form */
+.volunteer_form label {
+  font-size: 14px;
+}
+
+.volunteer_form input::placeholder {
+  font-size: 15px;
+}
+
+/* contact form */
+.contact_form input{
+  padding: 15px ;
+}
+.contact_form input,.contact_form input::placeholder{
+  font-size: 14px;
+}
